@@ -1,0 +1,60 @@
+.NavSide{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow: auto;
+    width: 100%;
+}
+
+
+.show-mobile-menu-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: transparent;
+    font-size: 36px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .close-mobile-menu-button {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: transparent;
+    font-size: 50px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .mobile-menu {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.85);
+    transition: 0.3s;
+  }
+  
+  .mobile-menu a {
+    padding: 10px 0px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  
+
+  

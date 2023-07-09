@@ -1,0 +1,28 @@
+.HelpBar{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--cardColor);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    font-size: 20px;
+}
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hbar{
+    display: flex;
+    justify-items: auto;
+}
+
+.hbar a{
+    color: black;
+    text-decoration: none;
+    padding-left: 1rem;
+    font-size: 1.4rem;
+}

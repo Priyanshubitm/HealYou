@@ -1,0 +1,10 @@
+.ProfileSide{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+}
+.navBar{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}

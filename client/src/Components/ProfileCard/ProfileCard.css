@@ -1,0 +1,118 @@
+.ProfileCard{
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 1rem;
+    overflow-x: clip;
+    background: var(--cardColor);
+    padding-bottom: 1rem;
+}
+
+.ProfileImages{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ProfileImages>img:nth-of-type(1){
+    width: 100%;
+    height: 12rem;
+}
+
+.ProfileImages>img:nth-of-type(2){
+    width: 8rem;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -4rem;
+    box-shadow: var(--profileShadow);
+}
+
+
+.ProfileName{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+    gap:7px;
+}
+
+.ProfileName>span:nth-of-type(1){
+    font-weight: bold;
+}
+
+
+.followStatus{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.follow{
+    display: flex;
+    background-color: var(--btncolor);
+    border-radius: 10px;
+    padding: 5px;
+    height: 2rem;
+    width: 45%;
+    flex-direction: row;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+    margin-right: 1rem;
+}
+
+.s-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.follow span{
+    justify-content: right;
+    /* align-items: center; */
+    align-self: center;
+    padding-left: 4px;
+    font-weight: bold;
+}
+.follow span:nth-of-type(1){
+    padding-left: 10px;
+}
+
+.ProfileCard>span{
+    display: flex;
+    background-color: var(--btncolor);
+    border-radius: 10px;
+    padding: 8px;
+    height: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+    align-self: center;
+    margin-bottom: 1.2rem;
+
+    cursor: pointer;
+    
+}
+.follow{
+    padding-right: 18px;
+}
+
+.Profile-btn{
+    height: 2.5rem;
+    padding: 20px ;
+    width: 40%;
+    align-items: center;
+    font-size: 1.2rem;
+    /* font-weight: bold; */
+    justify-content: center;
+    font-style: normal;
+}
+.My-Profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
