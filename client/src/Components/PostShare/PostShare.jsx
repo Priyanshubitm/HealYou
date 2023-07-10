@@ -53,7 +53,7 @@ const PostShare = () => {
 
   return (
     <div className="PostShare">
-        <img src={user.coverPicture ? serverPublic +user.profilePicture : serverPublic + "defaultProfile.jpeg"} alt="" />
+        <img src={user.profilepicture ? serverPublic +user.profilepicture : serverPublic + "defaultProfile.jpeg"} alt="" />
         <div className="PostText">
             <input 
             ref={desc}

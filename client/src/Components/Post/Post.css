@@ -38,3 +38,7 @@
     align-items: flex-start;
     gap: 0.4rem;
 }
+
+.detail {
+    gap: 1rem;
+}

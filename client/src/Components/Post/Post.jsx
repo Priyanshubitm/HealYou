@@ -9,13 +9,14 @@ import IosShareIcon from '@mui/icons-material/IosShare';
 import SendIcon from '@mui/icons-material/Send';
 import { useSelector } from 'react-redux';
 import { hugPost, likePost } from '../../api/PostRequest';
-
+import {useParams} from 'react-router-dom'
 const Post = ({data}) => {
     const {user} = useSelector((state) => state.authReducer.authData);
     const [liked , setLiked] = useState(data.likes.includes(user._id));
     const [likes , setLikes] = useState(data.likes.length);
     const [hugged , setHugged] = useState(data.hugs.includes(user._id));
     const [hugs , setHugs] = useState(data.hugs.length);
+    const params = useParams(); 
 
     const handleLike =()=>{
         setLiked((prev)=>!prev);
@@ -30,6 +31,11 @@ const Post = ({data}) => {
 
   return (
     <div className="Post">
+        <div className="detail">
+            <span><b>{data.userId} </b></span>
+            <br />
+            <span> {data.desc}</span>
+        </div>
         <img src={ data.image ? process.env.REACT_APP_PUBLIC_FOLDER + data.image : "" } alt=""  />
 
         <div className="postReact">
@@ -57,11 +63,6 @@ const Post = ({data}) => {
         <div className="reactionNumbers">
             <span>{likes} likes</span>
             <span>{hugs} hugs</span>
-        </div>
-
-        <div className="detail">
-            <span><b>{data.name}</b></span>
-            <span> {data.desc}</span>
         </div>
     </div>
   )
