@@ -16,10 +16,7 @@
 - SocketIO
 - JSON Webtoken
 
-About Website:-
-
-
-
+### About Website
 
 - Login, Signup and Authentication of users with JSON Webtoken.
 – User can create and react to a post and also edit and delete his posts.
