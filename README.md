@@ -1,20 +1,20 @@
-About HealYou
+### About HealYou
 
-Technologies used (frameworks, libraries).
+## Technologies used (frameworks, libraries).
 
-ReactJS.
-ExpressJS.
-NodeJS
-React router.
-Axios.
-Mantine UI.
-MUI Icons(MaterialUI)
-React-icons.
-Redux.
-MongoDB.
-Mongooge
-SocketIO
-JSON Webtoken
+- ReactJS.
+- ExpressJS.
+- NodeJS
+- React router.
+- Axios.
+- Mantine UI.
+- MUI Icons(MaterialUI)
+- React-icons.
+- Redux.
+- MongoDB.
+- Mongooge
+- SocketIO
+- JSON Webtoken
 
 About Website:-
 
