@@ -2,9 +2,9 @@
   "name": "HealYou",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "server": "nodemon server.js --prefix server",
+    "server": "nodemon index.js --prefix server",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
