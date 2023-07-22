@@ -1,4 +1,4 @@
-### About HealYou
+# About HealYou
 
 ## Technologies used (frameworks, libraries).
 
@@ -19,14 +19,16 @@
 About Website:-
 
 
-I used MongoDB, Express, React & Node to build this website.
-You can log in and Registration on this website.
-It has an email, password-based authorization system.
-Users can Follow and UnFollow someone.
-Users can see someone's post by following them.
-Users can create posts, update posts and delete their posts.
-Users can update their profile picture, cover photo and information.
-Users can Chat with other Users for better one-to-one communication.
+
+
+- Login, Signup and Authentication of users with JSON Webtoken.
+– User can create and react to a post and also edit and delete his posts.
+– User’s Profile with Profile image, Followers, Following, number of posts, posts and Information about the user.
+– HealYou blog, wellness centre, safety centre and emergency dealing for better user care.
+– Integrated one-to-one chat for better communication between users.
+- Users can update their profile picture, cover photo and information.
+– Following and Unfollowing users and Icons with MUI (Material UI).
+– Tools and technologies used: HTML, CSS, JavaScript, NodeJS, MongoDB, ExpressJS, ReactJS and SocketIO.
 
 
 
