@@ -1,3 +1,35 @@
+About HealYou
+
+Technologies used (frameworks, libraries).
+
+ReactJS.
+ExpressJS.
+NodeJS
+React router.
+Axios.
+Mantine UI.
+MUI Icons(MaterialUI)
+React-icons.
+Redux.
+MongoDB.
+Mongooge
+SocketIO
+JSON Webtoken
+
+About Website:-
+
+
+I used MongoDB, Express, React & Node to build this website.
+You can log in and Registration on this website.
+It has an email, password-based authorization system.
+Users can Follow and UnFollow someone.
+Users can see someone's post by following them.
+Users can create posts, update posts and delete their posts.
+Users can update their profile picture, cover photo and information.
+Users can Chat with other Users for better one-to-one communication.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
