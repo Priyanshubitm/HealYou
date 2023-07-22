@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Post.css"
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
@@ -10,13 +10,51 @@ import SendIcon from '@mui/icons-material/Send';
 import { useSelector } from 'react-redux';
 import { hugPost, likePost } from '../../api/PostRequest';
 import {useParams} from 'react-router-dom'
-const Post = ({data}) => {
+import { toast } from "react-toastify";
+
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { format } from "timeago.js";
+const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER
+const serverside = process.env.REACT_APP_PUBLIC
+const Post = ({ data }) => {
     const {user} = useSelector((state) => state.authReducer.authData);
     const [liked , setLiked] = useState(data.likes.includes(user._id));
     const [likes , setLikes] = useState(data.likes.length);
     const [hugged , setHugged] = useState(data.hugs.includes(user._id));
     const [hugs , setHugs] = useState(data.hugs.length);
     const params = useParams(); 
+    const navigate = useNavigate();
+
+    const [postUser, setUserPost] = useState([]);
+    const { firstname, lastname, profilepicture } = postUser;
+
+    useEffect(() => {
+      const fetchPostUser = async () => {
+        await axios
+          .get(`http://localhost:4000/user/${data.userId}`, {
+            method: "GET",
+            headers: {
+              Authorization: `Bearer ${
+                JSON.parse(localStorage.getItem("profile")).token
+              }`,
+            },
+          })
+          .then((res) => {
+            setUserPost(res.data);
+            console.log(res.data);
+          })
+          .catch((err) => {
+            // toast(err.message);
+          });
+      };
+      fetchPostUser();
+    }, [data]);
+    console.log("yes");
+    console.log(firstname);
+    console.log(lastname);
+    console.log(profilepicture);
+
 
     const handleLike =()=>{
         setLiked((prev)=>!prev);
@@ -28,14 +66,32 @@ const Post = ({data}) => {
         hugPost(data._id , user._id)
         hugged ? setHugs((prev)=>prev-1) : setHugs((prev)=>prev+1);
     }
-
+  
   return (
     <div className="Post">
         <div className="detail">
-            <span><b>{data.userId} </b></span>
+        <div style={{ display: "flex" }}>
+          <img
+            src={profilepicture ? serverPublic +profilepicture : serverPublic + "defaultProfile.jpeg"}
+            alt=""
+            style={{
+              width: "40px",
+              height: "40px",
+              marginRight: "15px",
+              borderRadius: "50%",
+            }}
+          />
+          <div>
+            <span>
+              <b>{firstname + " " + lastname}</b>
+            </span>
             <br />
-            <span> {data.desc}</span>
+            <span>{format(data.createdAt)}</span>
+          </div>
         </div>
+        <br />
+        <span> {data?.desc}</span>
+      </div>
         <img src={ data.image ? process.env.REACT_APP_PUBLIC_FOLDER + data.image : "" } alt=""  />
 
         <div className="postReact">
@@ -53,10 +109,10 @@ const Post = ({data}) => {
                 <span style={{cursor:"pointer"}}>
                     <TextsmsOutlinedIcon/> 
                 </span>
-
+{/* 
                 <span style={{cursor:"pointer"}}>
                     <SendIcon/>
-                </span>
+                </span> */}
 
         </div>
 

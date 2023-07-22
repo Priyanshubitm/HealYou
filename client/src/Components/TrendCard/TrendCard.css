@@ -8,6 +8,7 @@
     margin-top: 1rem;
 }
 
+
 .trend{
     display: flex;
     flex-direction: column;
@@ -20,3 +21,12 @@
 .trend>span:nth-last-of-type(1){
     font-size: 13px;
 }
+
+@media (max-width: 991.98px) {
+    .TrendCard {
+      display: none;
+    }
+    .ShareModal {
+      display: none;
+    }
+  }

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllUser } from '../../api/UserRequest';
 import { followUser, unFollowUser } from '../../actions/UserAction';
+import { Link } from "react-router-dom";
 
 const User = ({person}) => {
     const dispatch = useDispatch();
@@ -16,18 +17,33 @@ const User = ({person}) => {
     }
   return (
     <div className="follower">
-    <div>
-        <img src={person.profilepicture ? serverPublic +person.profilepicture : serverPublic + "defaultProfile.jpeg"} alt="" className="followerImage" />
+      <div>
+        <img
+          src={
+            person.profilepicture
+              ? serverPublic + person.profilepicture
+              : serverPublic + "defaultProfile.jpeg"
+          }
+          alt=""
+          className="followerImage"
+        />
         <div className="name">
-            <span>{person.firstname} {person.lastname}</span>
-            <span>{person.username}</span>
+          <Link
+            to={`/profile/${person._id}`}
+            style={{ textDecoration: "none",color:"black",fontWeight:"bold" }}
+          >
+            <span>
+              {person.firstname} {person.lastname}
+            </span>
+          </Link>
+          <span>{person.username}</span>
         </div>
+      </div>
+      <button className="button follower-btn" onClick={handleFollow}>
+        {following ? "Unfollow" : "Follow"}
+      </button>
     </div>
-    <button className="button follower-btn" onClick={handleFollow}>
-        { following ? "Unfollow" : "Follow" }
-    </button>
-</div>
-  )
+  );
 }
 
 export default User

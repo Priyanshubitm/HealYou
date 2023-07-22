@@ -32,9 +32,10 @@
 
 .button:hover{
     cursor: pointer;
-    color: white;
+    color: var(--btncolor);
     background: transparent;
     border: 2px solid black;
+    font-weight: bold;
 }
 .button:disabled{
     background: var(--btncolor);
@@ -44,6 +45,13 @@
 ::-webkit-scrollbar{
     display: none;
 }
+
+
+@media (max-width: 991.98px) {
+    .App {
+      padding: 0.25rem 1rem 0;
+    }
+  }
 
 
 

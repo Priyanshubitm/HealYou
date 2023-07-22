@@ -8,6 +8,7 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import { useDispatch, useSelector } from 'react-redux';
 import { uploadImage, uploadPost  } from '../../actions/UploadAction';
+import { toast } from "react-toastify";
 
 
 const PostShare = () => {
@@ -30,6 +31,7 @@ const PostShare = () => {
   }
   const handleSubmit = (e)=>{
     e.preventDefault();
+    toast.success("UPLOAD SUCCESS");
     const newPost = {
         userId:user._id,
         desc :desc.current.value
@@ -43,11 +45,13 @@ const PostShare = () => {
         // console.log(newPost);
         try {
             dispatch(uploadImage(data));
+            toast.success("IMAGE UPLOAD SUCCESS");
         } catch (error) {
             console.log(error);
         }
     }
     dispatch(uploadPost(newPost));
+    toast.success("UPLOAD SUCCESS");
     reset();
   }
 
@@ -66,18 +70,12 @@ const PostShare = () => {
                 <AddPhotoAlternateIcon/>
                 Photo
             </div>
-            <div className="Option Video">
+            <div className="Option Video"
+             onClick={()=>imageRef.current.click()}>
                 <VideoLibraryIcon/>
-                Video
+                GIF
             </div>
-            <div className="Option Location">
-                <LocationOnIcon/>
-                Location
-            </div>
-            <div className="Option Shedule">
-                <CalendarMonthIcon/>
-                Shedule
-            </div>
+            
             <button className="button PostShare-btn" onClick={handleSubmit} disabled={loading}>
                 {loading ? "Uploading.." : "Share"}
             </button>

@@ -7,16 +7,13 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import ChatIcon from '@mui/icons-material/Chat';
 import { color } from '@mui/system';
+import {Link } from 'react-router-dom';
+import NavBar from '../NavBar/NavBar';
 
 const ProfileSide = () => {
   return (
     <div className="ProfileSide">
-       <div className="navBar">
-           <HomeIcon style={{ fontSize: '2.1rem'}} className='navIcons'/>
-           <NotificationsIcon style={{ fontSize: '2.1rem' }} className='navIcons'/>           
-           <ChatIcon style={{ fontSize: '2.1rem' }} className='navIcons'/>
-           <SettingsIcon style={{ fontSize: '2.1rem' }} className='navIcons'/>
-       </div>
+       <NavBar/>
       <ProfileCard/>
       <FollowersCard/>
     </div>

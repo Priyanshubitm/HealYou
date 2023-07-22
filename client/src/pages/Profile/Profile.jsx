@@ -8,12 +8,12 @@ import "./Profile.css"
 const Profile = () => {
   return (
     <div className="Profile">
-        <ProfileLeft/>
+        <ProfileLeft />
         <div className="Profile-center">
             <ProfileCard location= "profilePage"/>
-            <PostSide/>
+            <PostSide location={true}/>
         </div>
-        <ProfileRight/>
+        <ProfileRight location ="Profile"/>
     </div>
   )
 }

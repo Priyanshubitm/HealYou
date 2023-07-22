@@ -1,0 +1,19 @@
+body{
+    /* background-image: url("../../img/Happy-1.jpg"); */
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    /* background: transparent; */
+}
+
+.AboutApp{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: larger;
+    font-weight: 800;
+    color: rgb(7, 7, 7);
+}
+.heading{
+     /* margin-left: 500px; */
+}
+.par{
+       color:black;
+}

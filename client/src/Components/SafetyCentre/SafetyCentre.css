@@ -1,0 +1,27 @@
+.Safety{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: var(--cardColor);
+    padding: 0.8rem;
+    border-radius: 1rem;
+    
+}
+.heading-div{
+    justify-content: center;
+    align-items: center;
+    
+}
+.largediv{
+    font-size: 2.5rem;
+}
+h1,h3,p,ul{
+    font-weight: bolder;
+}
+h3{
+    font-size: larger;
+}
+h1,h3{
+    color: black;
+}
+p,li{
+     color: black;
+}

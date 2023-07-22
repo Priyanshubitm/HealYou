@@ -8,8 +8,8 @@ const ProfileRight = () => {
   return (
     <div className="ProfileRight">
         <NavBar/>
-        <InfoCard/>
-        <FollowersCard/>
+        <InfoCard location={true}/>
+        <FollowersCard location={true}/>
     </div>
   )
 }

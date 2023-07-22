@@ -1,0 +1,29 @@
+.Wellness{
+    /* background-color: var(--bgcolor); */
+    color: black;
+    border-radius: 1rem;
+}
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}  
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns in the grid */
+gap: 20px; /* Gap between sections */
+}
+
+.well{
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: var(--cardColor);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: larger;
+  /* font-weight: 400; */
+  color: darkslateblue;
+  border-radius: 1rem;
+}

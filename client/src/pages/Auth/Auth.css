@@ -16,26 +16,36 @@
 
 
 
+.a-left {
+    gap: 2rem;
+  }
+
 .a-left > img{
     width: 12rem;
     height: 8rem;
 }
 
+
 .Webname > h1{
     font-size: 3rem;
-    background-color:black;
-    background-image: var(--btncolor);
+  background-color: black;
 
-    background-size: 100%;
-    background-repeat: repeat;
+  /* Create the gradient. */
+  background-image: var(--btncolor);
 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    moz-text-fill-color:transparent;
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 
-.Webname>h6{
+.Webname > h6{
     font-size: 1rem;
 }
 
@@ -93,3 +103,24 @@
 .AlreadySpan{
     font-size: 14px;
 }
+/* 
+
+
+@media (max-width: 775.98px) {
+    .Auth {
+      flex-direction: column;
+    }
+    .a-left {
+      gap: 1rem;
+    }
+    .a-left > img {
+      width: 3rem;
+      height: 3rem;
+    }
+    .Webname > h1 {
+      font-size: 2.5rem;
+    }
+    .Webname > h6 {
+      font-size: 0.76rem;
+    }
+  } */

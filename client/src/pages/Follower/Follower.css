@@ -1,7 +1,6 @@
-.Home{
+.Follower{
     position: relative;
     display: grid;
     grid-template-columns: 19rem auto 22rem;
     gap: 1rem;
 }
-

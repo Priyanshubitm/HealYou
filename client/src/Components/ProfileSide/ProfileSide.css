@@ -8,3 +8,13 @@
     display: flex;
     justify-content: space-between;
 }
+
+
+@media (max-width: 991.98px) {
+    .profileSide {
+      height: 5vh;
+    }
+    .MobileView {
+      display: none;
+    }
+  }

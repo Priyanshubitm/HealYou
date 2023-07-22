@@ -46,20 +46,19 @@
 
 .followStatus{
     display: flex;
-    gap: 0.5rem;
 }
 
 .follow{
     display: flex;
     background-color: var(--btncolor);
     border-radius: 10px;
-    padding: 5px;
+    padding: 3px;
     height: 2rem;
     width: 45%;
     flex-direction: row;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
     margin-bottom: 0.5rem;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
 }
 
 .s-icon{

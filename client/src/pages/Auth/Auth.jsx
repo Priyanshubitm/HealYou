@@ -31,13 +31,14 @@ const Auth = () => {
   }
   return (
     <div className="Auth">
-        <div className="a-left">
-            <img src={logo} alt="" />
-            <div className="Webname">
-                <h1>HealYou</h1>
-                <h6>PRIORITISE YOUR PEACE!</h6>
-            </div>
+      <div className="a-left">
+        <img src={logo} alt="" />
+        <div className="Webname">
+          <h1>HealYou</h1>
+          <h6>PRIORITISE YOUR PEACE!</h6>
         </div>
+      </div>
+      
         {/* <SignUp/> */}
         {/* <LogIn/> */}
         <div className="a-right">

@@ -7,6 +7,7 @@ import {useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import * as UserApi from '../../api/UserRequest.js'
 import { logOut } from '../../actions/AuthAction.js';
+import { format } from "timeago.js";
 const InfoCard = () => {
     const[modalOpened , setModalOpened] = useState(false);
     const dispatch = useDispatch();
@@ -16,21 +17,25 @@ const InfoCard = () => {
     const [profileUser , setProfileUser] = useState({});
     const {user} = useSelector((state) =>state.authReducer.authData);
 
-    useEffect(()=>{
-        const fetchUserProfile = async()=>{
-            if(profileUserId === user._id){
-                setProfileUser(user);
-            }else{
-                const profileUser = await UserApi.getUser(profileUserId);
-                setProfileUser(profileUser);
-            }
-        }
-        fetchUserProfile();
-    },[user])
+    useEffect(() => {
+        const fetchProfileUser = async () => {
+          if (profileUserId === user._id) {
+            setProfileUser(user);
+          } else {
+            // console.log("fetching");
+            const profileUser = await UserApi.getUser(profileUserId);
+            setProfileUser(profileUser.data);
+          }
+        };
+        fetchProfileUser();
+      }, [user, profileUserId]);
 
     const handleLogOut = ()=>{
         dispatch(logOut())
     }
+
+    const { about, livesIn, worksAt, relationship, createdAt, country } =
+    profileUser;
   return (
     <div className="InfoCard">
         <div className="InfoHead">
@@ -76,9 +81,19 @@ const InfoCard = () => {
             </span>
             <span>{profileUser.hereto}</span>
         </div>
-        <button className="button logout-btn" onClick= {handleLogOut} >
-            Logout
-         </button>
+        <div className="Info">
+            <span>
+                <b>Joined HealYou </b>
+            </span>
+            <span>{format(createdAt)}</span>
+        </div>
+        {user._id === profileUserId ? (
+        <button className="button logout-btn" onClick={handleLogOut}>
+          Logout
+        </button>
+      ) : (
+        ""
+      )}
     </div>
   )
 }
