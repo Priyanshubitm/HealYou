@@ -12,7 +12,6 @@
 - React-icons.
 - Redux.
 - MongoDB.
-- Mongooge
 - SocketIO
 - JSON Webtoken
 
